@@ -1,0 +1,3040 @@
+[gd_scene load_steps=8 format=3 uid="uid://m24xtiu5he34"]
+
+[ext_resource type="Script" uid="uid://bd2w6064l55d1" path="res://player.gd" id="1_hqtel"]
+[ext_resource type="PackedScene" uid="uid://o8wqreabnq75" path="res://Polygon/ModularCharacters.fbx" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://c44o8ekvdefl5" path="res://Polygon/PolygonFantasyHero_Texture_01.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://cf0xlderm2" path="res://Polygon/PolygonFantasyHero_Texture_Mask_04.png" id="3_sweqy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2hs0m"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1jxqw"]
+load_path = "res://.godot/imported/PolygonFantasyHero_Texture_Mask_01.png-ad065476199eaba65c4703c4e2decd28.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dw050"]
+albedo_texture = ExtResource("2_hqtel")
+emission_operator = 1
+emission_texture = ExtResource("3_sweqy")
+normal_texture = SubResource("CompressedTexture2D_1jxqw")
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_hqtel")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_2hs0m")
+
+[node name="ModularCharacters" parent="." instance=ExtResource("1_i3pqv")]
+
+[node name="Skeleton3D" parent="ModularCharacters" index="0"]
+bones/1/position = Vector3(0, 0.876276, -3.41481e-08)
+bones/2/position = Vector3(0.103933, 1.08719e-07, -6.29262e-18)
+bones/2/rotation = Quaternion(0.99502, 0.099679, 2.0783e-25, -6.09274e-17)
+bones/3/position = Vector3(0.181511, -2.004e-07, 1.11006e-17)
+bones/3/rotation = Quaternion(0.995186, 0.0980027, -3.74032e-24, 6.09376e-17)
+bones/3/scale = Vector3(0.999999, 0.999999, 1)
+bones/4/position = Vector3(0.179037, -2.7181e-07, -1.08453e-17)
+bones/4/rotation = Quaternion(0.99381, 0.11109, -6.24249e-25, -6.08533e-17)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/position = Vector3(0.11189, -5.07458e-07, 6.83149e-18)
+bones/5/rotation = Quaternion(-3.55739e-26, -2.55544e-18, -0.0417335, 0.999129)
+bones/6/position = Vector3(0.121645, 5.77763e-07, 7.35399e-18)
+bones/6/rotation = Quaternion(0.458571, 0.53825, -0.458571, 0.53825)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/position = Vector3(0, 0.0944761, 0.122722)
+bones/7/rotation = Quaternion(0, 0, 0, 1)
+bones/8/position = Vector3(0, 0.127669, 0.122722)
+bones/8/rotation = Quaternion(0, 0, 0, 1)
+bones/9/position = Vector3(0, 0.215435, 0.010532)
+bones/9/rotation = Quaternion(0, 0, 0, 1)
+bones/10/position = Vector3(0.0580117, -0.0419145, -0.0744716)
+bones/10/rotation = Quaternion(0.578548, 0.632486, -0.352514, 0.375471)
+bones/10/scale = Vector3(1, 1, 1)
+bones/11/position = Vector3(0.131979, 2.65987e-07, -7.91778e-08)
+bones/11/rotation = Quaternion(0.0113281, -0.23686, -0.0338065, 0.970889)
+bones/11/scale = Vector3(1, 1, 1)
+bones/12/position = Vector3(0.339474, -0.00144891, -0.00143628)
+bones/12/rotation = Quaternion(0.00168383, -0.0407496, 0.0412519, 0.998316)
+bones/13/position = Vector3(0.271145, -2.22045e-16, -0.000381342)
+bones/13/rotation = Quaternion(0, 0.0358308, 0, 0.999358)
+bones/14/position = Vector3(0.0351405, -0.0117072, 0.0450557)
+bones/14/rotation = Quaternion(0.0254807, -0.276843, -0.0880393, 0.956534)
+bones/15/position = Vector3(0.0637026, 1.8921e-07, -3.47986e-07)
+bones/15/rotation = Quaternion(-0.039942, 0.11784, -0.141636, 0.982068)
+bones/16/position = Vector3(0.056655, -2.23444e-07, -5.77987e-08)
+bones/16/rotation = Quaternion(-0.0364033, 0.152035, 0.229995, 0.960553)
+bones/16/scale = Vector3(1, 1, 1)
+bones/17/position = Vector3(0.103966, 0.00398667, 0.0267266)
+bones/17/rotation = Quaternion(0.000280496, -0.0657945, -0.00425393, 0.997824)
+bones/18/position = Vector3(0.0409355, 6.06017e-07, 2.24532e-07)
+bones/18/rotation = Quaternion(-0.00115399, 0.0107416, -0.0983298, 0.995095)
+bones/18/scale = Vector3(1, 1, 1)
+bones/19/position = Vector3(0.0379131, -2.34882e-07, -2.74613e-07)
+bones/19/rotation = Quaternion(-0.00691221, 0.0257175, -0.0570025, 0.998019)
+bones/19/scale = Vector3(1, 1, 1)
+bones/20/position = Vector3(0.0377975, 2.11004e-07, -2.51464e-08)
+bones/20/rotation = Quaternion(-0.00451965, 0.0280399, 0.159068, 0.986859)
+bones/21/position = Vector3(0.099826, -0.00115979, -0.0328334)
+bones/21/rotation = Quaternion(-0.00248645, 0.0438797, -0.0565191, 0.997434)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/position = Vector3(0.0424872, 5.8874e-07, -5.75076e-08)
+bones/22/rotation = Quaternion(0.00263729, -0.019492, -0.0212693, 0.99958)
+bones/22/scale = Vector3(1, 1, 1)
+bones/23/position = Vector3(0.035133, -6.23694e-07, 4.88025e-07)
+bones/23/rotation = Quaternion(-0.0181491, 0.0714787, -0.0925109, 0.992977)
+bones/23/scale = Vector3(0.999999, 1, 1)
+bones/24/position = Vector3(0.0300329, 2.28516e-07, -4.19668e-07)
+bones/24/rotation = Quaternion(0.0166463, -0.0965251, 0.16913, 0.980714)
+bones/24/scale = Vector3(1, 1, 1)
+bones/27/position = Vector3(0.0580154, -0.0419142, 0.0744715)
+bones/27/rotation = Quaternion(0.632486, -0.578548, -0.375471, -0.352514)
+bones/27/scale = Vector3(1, 1, 1)
+bones/28/position = Vector3(-0.131978, 6.20624e-06, 1.25476e-07)
+bones/28/rotation = Quaternion(0.0113281, -0.23686, -0.0338065, 0.970889)
+bones/28/scale = Vector3(1, 1, 1)
+bones/29/position = Vector3(-0.339475, 0.00144742, 0.00143628)
+bones/29/rotation = Quaternion(0.00168383, -0.0407496, 0.0412519, 0.998316)
+bones/30/position = Vector3(-0.271145, -2.22045e-16, 0.000381337)
+bones/30/rotation = Quaternion(4.52655e-26, 0.0358308, -4.388e-18, 0.999358)
+bones/31/position = Vector3(-0.0351401, 0.0117103, -0.0450557)
+bones/31/rotation = Quaternion(0.0254807, -0.276843, -0.0880393, 0.956534)
+bones/32/position = Vector3(-0.063702, -7.99131e-06, 7.86902e-07)
+bones/32/rotation = Quaternion(-0.039942, 0.11784, -0.141636, 0.982068)
+bones/33/position = Vector3(-0.0566543, 3.19244e-07, -1.52257e-07)
+bones/33/rotation = Quaternion(-0.0364033, 0.152035, 0.229995, 0.960553)
+bones/33/scale = Vector3(1, 1, 1)
+bones/34/position = Vector3(-0.103966, -0.00398952, -0.0267266)
+bones/34/rotation = Quaternion(0.000280496, -0.0657945, -0.00425393, 0.997824)
+bones/35/position = Vector3(-0.0409351, 3.61332e-07, -2.73731e-07)
+bones/35/rotation = Quaternion(-0.00115399, 0.0107416, -0.0983298, 0.995095)
+bones/35/scale = Vector3(1, 1, 1)
+bones/36/position = Vector3(-0.0379133, 3.48366e-06, 2.24077e-07)
+bones/36/rotation = Quaternion(-0.00691221, 0.0257175, -0.0570025, 0.998019)
+bones/36/scale = Vector3(1, 1, 1)
+bones/37/position = Vector3(-0.0377929, -5.47537e-06, -1.3201e-07)
+bones/37/rotation = Quaternion(-0.00451965, 0.0280399, 0.159068, 0.986859)
+bones/38/position = Vector3(-0.0998258, 0.0011602, 0.0328334)
+bones/38/rotation = Quaternion(-0.00248645, 0.0438797, -0.0565191, 0.997434)
+bones/38/scale = Vector3(1, 1, 1)
+bones/39/position = Vector3(-0.0424872, -3.27587e-07, 3.75553e-08)
+bones/39/rotation = Quaternion(0.00263729, -0.019492, -0.0212693, 0.99958)
+bones/39/scale = Vector3(1, 1, 1)
+bones/40/position = Vector3(-0.0351329, 4.24158e-07, -4.75446e-07)
+bones/40/rotation = Quaternion(-0.0181491, 0.0714787, -0.0925109, 0.992977)
+bones/40/scale = Vector3(0.999999, 1, 1)
+bones/41/position = Vector3(-0.0300316, 9.08298e-07, 7.83664e-07)
+bones/41/rotation = Quaternion(0.0166463, -0.0965251, 0.16913, 0.980714)
+bones/41/scale = Vector3(1, 1, 1)
+bones/43/position = Vector3(-0.131191, -0.0606286, 8.78904e-08)
+bones/43/rotation = Quaternion(0.97027, 0.00629897, 0.241938, -0.00157066)
+bones/44/position = Vector3(0.145408, 0.128122, 1.62868e-18)
+bones/45/position = Vector3(0, -0.176926, -0.0581665)
+bones/45/rotation = Quaternion(0, 0, 0, 1)
+bones/46/position = Vector3(0, -0.279419, -0.0171058)
+bones/46/rotation = Quaternion(0, 0, 0, 1)
+bones/47/position = Vector3(0, -0.398305, -0.0604947)
+bones/47/rotation = Quaternion(0, 0, 0, 1)
+bones/48/position = Vector3(0, -0.442012, -0.0555442)
+bones/48/rotation = Quaternion(0, 0, 0, 1)
+bones/49/position = Vector3(-0.0042923, -0.150331, 8.24378e-18)
+bones/50/position = Vector3(-0.0411576, -0.0269207, -0.0989671)
+bones/50/rotation = Quaternion(-0.0417753, 0.705872, -0.70419, 0.0641594)
+bones/50/scale = Vector3(1, 1, 1)
+bones/51/position = Vector3(0.399309, -2.18956e-08, -3.60249e-09)
+bones/51/rotation = Quaternion(0.644378, -0.0244627, 0.00473769, 0.764301)
+bones/52/position = Vector3(0.377124, -3.08646e-09, 2.22206e-09)
+bones/52/rotation = Quaternion(0.85767, -0.507213, -0.0397527, -0.0745437)
+bones/52/scale = Vector3(1, 1, 1)
+bones/53/position = Vector3(0.11284, 2.88251e-08, 0)
+bones/53/rotation = Quaternion(-8.26685e-18, 1.29453e-17, 0.270016, 0.962856)
+bones/54/position = Vector3(0.0729576, 0, 1.38778e-17)
+bones/54/rotation = Quaternion(0, 0.707107, 0, 0.707107)
+bones/55/position = Vector3(-0.00195668, -0.0442946, -0.0075727)
+bones/55/rotation = Quaternion(-0.528394, 0.552249, -0.445798, -0.465924)
+bones/55/scale = Vector3(1, 1, 1)
+bones/56/position = Vector3(-0.0411577, -0.0269207, 0.0989671)
+bones/56/rotation = Quaternion(-0.705872, -0.0417753, 0.0641594, 0.70419)
+bones/57/position = Vector3(-0.399309, -3.52685e-07, 2.84285e-09)
+bones/57/rotation = Quaternion(0.644378, -0.0244627, 0.00473769, 0.764301)
+bones/58/position = Vector3(-0.377123, 1.37471e-07, -8.32605e-07)
+bones/58/rotation = Quaternion(0.85767, -0.507213, -0.0397527, -0.0745437)
+bones/58/scale = Vector3(1, 1, 1)
+bones/59/position = Vector3(-0.11284, -4.28264e-08, 1.38778e-17)
+bones/59/rotation = Quaternion(-1.26183e-16, 1.29452e-17, 0.270016, 0.962856)
+bones/60/position = Vector3(-0.0729575, 0, -1.38778e-17)
+bones/60/rotation = Quaternion(8.65956e-17, 0.707107, 0, 0.707107)
+bones/61/position = Vector3(0.00195668, 0.0442946, 0.00757272)
+bones/61/rotation = Quaternion(-0.465924, -0.445798, -0.552249, 0.528394)
+bones/61/scale = Vector3(1, 1, 1)
+bones/62/position = Vector3(-2.88858e-08, 3.01708e-08, 3.32029e-24)
+
+[node name="Chr_Hair_01" parent="ModularCharacters/Skeleton3D" index="0"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_02" parent="ModularCharacters/Skeleton3D" index="1"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_03" parent="ModularCharacters/Skeleton3D" index="2"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_04" parent="ModularCharacters/Skeleton3D" index="3"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_05" parent="ModularCharacters/Skeleton3D" index="4"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_06" parent="ModularCharacters/Skeleton3D" index="5"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_07" parent="ModularCharacters/Skeleton3D" index="6"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_08" parent="ModularCharacters/Skeleton3D" index="7"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_09" parent="ModularCharacters/Skeleton3D" index="8"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_10" parent="ModularCharacters/Skeleton3D" index="9"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_11" parent="ModularCharacters/Skeleton3D" index="10"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_12" parent="ModularCharacters/Skeleton3D" index="11"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_13" parent="ModularCharacters/Skeleton3D" index="12"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_14" parent="ModularCharacters/Skeleton3D" index="13"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_15" parent="ModularCharacters/Skeleton3D" index="14"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_16" parent="ModularCharacters/Skeleton3D" index="15"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_17" parent="ModularCharacters/Skeleton3D" index="16"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_18" parent="ModularCharacters/Skeleton3D" index="17"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_19" parent="ModularCharacters/Skeleton3D" index="18"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_20" parent="ModularCharacters/Skeleton3D" index="19"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_21" parent="ModularCharacters/Skeleton3D" index="20"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_22" parent="ModularCharacters/Skeleton3D" index="21"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_23" parent="ModularCharacters/Skeleton3D" index="22"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_24" parent="ModularCharacters/Skeleton3D" index="23"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_25" parent="ModularCharacters/Skeleton3D" index="24"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_26" parent="ModularCharacters/Skeleton3D" index="25"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_27" parent="ModularCharacters/Skeleton3D" index="26"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_28" parent="ModularCharacters/Skeleton3D" index="27"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_29" parent="ModularCharacters/Skeleton3D" index="28"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_30" parent="ModularCharacters/Skeleton3D" index="29"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_31" parent="ModularCharacters/Skeleton3D" index="30"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_32" parent="ModularCharacters/Skeleton3D" index="31"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_33" parent="ModularCharacters/Skeleton3D" index="32"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_34" parent="ModularCharacters/Skeleton3D" index="33"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_35" parent="ModularCharacters/Skeleton3D" index="34"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_36" parent="ModularCharacters/Skeleton3D" index="35"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_37" parent="ModularCharacters/Skeleton3D" index="36"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hair_38" parent="ModularCharacters/Skeleton3D" index="37"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_01" parent="ModularCharacters/Skeleton3D" index="38"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_02" parent="ModularCharacters/Skeleton3D" index="39"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_03" parent="ModularCharacters/Skeleton3D" index="40"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_04" parent="ModularCharacters/Skeleton3D" index="41"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_05" parent="ModularCharacters/Skeleton3D" index="42"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_06" parent="ModularCharacters/Skeleton3D" index="43"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_07" parent="ModularCharacters/Skeleton3D" index="44"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_08" parent="ModularCharacters/Skeleton3D" index="45"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_09" parent="ModularCharacters/Skeleton3D" index="46"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_10" parent="ModularCharacters/Skeleton3D" index="47"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_11" parent="ModularCharacters/Skeleton3D" index="48"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_12" parent="ModularCharacters/Skeleton3D" index="49"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_13" parent="ModularCharacters/Skeleton3D" index="50"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_14" parent="ModularCharacters/Skeleton3D" index="51"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_BackAttachment_15" parent="ModularCharacters/Skeleton3D" index="52"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_01" parent="ModularCharacters/Skeleton3D" index="53"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_02" parent="ModularCharacters/Skeleton3D" index="54"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_03" parent="ModularCharacters/Skeleton3D" index="55"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_04" parent="ModularCharacters/Skeleton3D" index="56"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_05" parent="ModularCharacters/Skeleton3D" index="57"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_06" parent="ModularCharacters/Skeleton3D" index="58"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_07" parent="ModularCharacters/Skeleton3D" index="59"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_08" parent="ModularCharacters/Skeleton3D" index="60"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_09" parent="ModularCharacters/Skeleton3D" index="61"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_10" parent="ModularCharacters/Skeleton3D" index="62"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_11" parent="ModularCharacters/Skeleton3D" index="63"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_12" parent="ModularCharacters/Skeleton3D" index="64"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_13" parent="ModularCharacters/Skeleton3D" index="65"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_14" parent="ModularCharacters/Skeleton3D" index="66"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_15" parent="ModularCharacters/Skeleton3D" index="67"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_16" parent="ModularCharacters/Skeleton3D" index="68"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_17" parent="ModularCharacters/Skeleton3D" index="69"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_18" parent="ModularCharacters/Skeleton3D" index="70"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_19" parent="ModularCharacters/Skeleton3D" index="71"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_20" parent="ModularCharacters/Skeleton3D" index="72"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachRight_21" parent="ModularCharacters/Skeleton3D" index="73"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_01" parent="ModularCharacters/Skeleton3D" index="74"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_02" parent="ModularCharacters/Skeleton3D" index="75"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_03" parent="ModularCharacters/Skeleton3D" index="76"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_04" parent="ModularCharacters/Skeleton3D" index="77"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_05" parent="ModularCharacters/Skeleton3D" index="78"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_06" parent="ModularCharacters/Skeleton3D" index="79"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_07" parent="ModularCharacters/Skeleton3D" index="80"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_08" parent="ModularCharacters/Skeleton3D" index="81"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_09" parent="ModularCharacters/Skeleton3D" index="82"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_10" parent="ModularCharacters/Skeleton3D" index="83"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_11" parent="ModularCharacters/Skeleton3D" index="84"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_12" parent="ModularCharacters/Skeleton3D" index="85"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_13" parent="ModularCharacters/Skeleton3D" index="86"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_14" parent="ModularCharacters/Skeleton3D" index="87"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_15" parent="ModularCharacters/Skeleton3D" index="88"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_16" parent="ModularCharacters/Skeleton3D" index="89"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_17" parent="ModularCharacters/Skeleton3D" index="90"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_18" parent="ModularCharacters/Skeleton3D" index="91"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_19" parent="ModularCharacters/Skeleton3D" index="92"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_20" parent="ModularCharacters/Skeleton3D" index="93"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ShoulderAttachLeft_21" parent="ModularCharacters/Skeleton3D" index="94"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachRight_01" parent="ModularCharacters/Skeleton3D" index="95"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachRight_02" parent="ModularCharacters/Skeleton3D" index="96"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachRight_03" parent="ModularCharacters/Skeleton3D" index="97"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachRight_04" parent="ModularCharacters/Skeleton3D" index="98"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachRight_05" parent="ModularCharacters/Skeleton3D" index="99"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachRight_06" parent="ModularCharacters/Skeleton3D" index="100"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachLeft_01" parent="ModularCharacters/Skeleton3D" index="101"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachLeft_02" parent="ModularCharacters/Skeleton3D" index="102"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachLeft_03" parent="ModularCharacters/Skeleton3D" index="103"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachLeft_04" parent="ModularCharacters/Skeleton3D" index="104"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachLeft_05" parent="ModularCharacters/Skeleton3D" index="105"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ElbowAttachLeft_06" parent="ModularCharacters/Skeleton3D" index="106"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_01" parent="ModularCharacters/Skeleton3D" index="107"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_02" parent="ModularCharacters/Skeleton3D" index="108"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_03" parent="ModularCharacters/Skeleton3D" index="109"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_04" parent="ModularCharacters/Skeleton3D" index="110"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_05" parent="ModularCharacters/Skeleton3D" index="111"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_06" parent="ModularCharacters/Skeleton3D" index="112"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_07" parent="ModularCharacters/Skeleton3D" index="113"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_08" parent="ModularCharacters/Skeleton3D" index="114"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_09" parent="ModularCharacters/Skeleton3D" index="115"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_10" parent="ModularCharacters/Skeleton3D" index="116"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_11" parent="ModularCharacters/Skeleton3D" index="117"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HipsAttachment_12" parent="ModularCharacters/Skeleton3D" index="118"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_01" parent="ModularCharacters/Skeleton3D" index="119"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_02" parent="ModularCharacters/Skeleton3D" index="120"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_03" parent="ModularCharacters/Skeleton3D" index="121"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_04" parent="ModularCharacters/Skeleton3D" index="122"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_05" parent="ModularCharacters/Skeleton3D" index="123"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_06" parent="ModularCharacters/Skeleton3D" index="124"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_07" parent="ModularCharacters/Skeleton3D" index="125"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_08" parent="ModularCharacters/Skeleton3D" index="126"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_09" parent="ModularCharacters/Skeleton3D" index="127"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_10" parent="ModularCharacters/Skeleton3D" index="128"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachRight_11" parent="ModularCharacters/Skeleton3D" index="129"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_01" parent="ModularCharacters/Skeleton3D" index="130"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_02" parent="ModularCharacters/Skeleton3D" index="131"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_03" parent="ModularCharacters/Skeleton3D" index="132"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_04" parent="ModularCharacters/Skeleton3D" index="133"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_05" parent="ModularCharacters/Skeleton3D" index="134"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_06" parent="ModularCharacters/Skeleton3D" index="135"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_07" parent="ModularCharacters/Skeleton3D" index="136"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_08" parent="ModularCharacters/Skeleton3D" index="137"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_09" parent="ModularCharacters/Skeleton3D" index="138"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_10" parent="ModularCharacters/Skeleton3D" index="139"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_KneeAttachLeft_11" parent="ModularCharacters/Skeleton3D" index="140"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Male_01" parent="ModularCharacters/Skeleton3D" index="141"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Male_02" parent="ModularCharacters/Skeleton3D" index="142"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Male_03" parent="ModularCharacters/Skeleton3D" index="143"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Male_04" parent="ModularCharacters/Skeleton3D" index="144"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Male_05" parent="ModularCharacters/Skeleton3D" index="145"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Male_06" parent="ModularCharacters/Skeleton3D" index="146"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Male_07" parent="ModularCharacters/Skeleton3D" index="147"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Male_08" parent="ModularCharacters/Skeleton3D" index="148"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Male_09" parent="ModularCharacters/Skeleton3D" index="149"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Male_10" parent="ModularCharacters/Skeleton3D" index="150"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_01" parent="ModularCharacters/Skeleton3D" index="151"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_02" parent="ModularCharacters/Skeleton3D" index="152"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_03" parent="ModularCharacters/Skeleton3D" index="153"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_04" parent="ModularCharacters/Skeleton3D" index="154"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_05" parent="ModularCharacters/Skeleton3D" index="155"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_06" parent="ModularCharacters/Skeleton3D" index="156"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_07" parent="ModularCharacters/Skeleton3D" index="157"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_08" parent="ModularCharacters/Skeleton3D" index="158"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_09" parent="ModularCharacters/Skeleton3D" index="159"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_10" parent="ModularCharacters/Skeleton3D" index="160"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_11" parent="ModularCharacters/Skeleton3D" index="161"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_12" parent="ModularCharacters/Skeleton3D" index="162"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_13" parent="ModularCharacters/Skeleton3D" index="163"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_14" parent="ModularCharacters/Skeleton3D" index="164"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_15" parent="ModularCharacters/Skeleton3D" index="165"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_16" parent="ModularCharacters/Skeleton3D" index="166"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_17" parent="ModularCharacters/Skeleton3D" index="167"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_FacialHair_Male_18" parent="ModularCharacters/Skeleton3D" index="168"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_00" parent="ModularCharacters/Skeleton3D" index="169"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_01" parent="ModularCharacters/Skeleton3D" index="170"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_02" parent="ModularCharacters/Skeleton3D" index="171"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_03" parent="ModularCharacters/Skeleton3D" index="172"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_04" parent="ModularCharacters/Skeleton3D" index="173"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_05" parent="ModularCharacters/Skeleton3D" index="174"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_06" parent="ModularCharacters/Skeleton3D" index="175"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_07" parent="ModularCharacters/Skeleton3D" index="176"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_08" parent="ModularCharacters/Skeleton3D" index="177"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_09" parent="ModularCharacters/Skeleton3D" index="178"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_10" parent="ModularCharacters/Skeleton3D" index="179"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_11" parent="ModularCharacters/Skeleton3D" index="180"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_12" parent="ModularCharacters/Skeleton3D" index="181"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_13" parent="ModularCharacters/Skeleton3D" index="182"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_14" parent="ModularCharacters/Skeleton3D" index="183"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_15" parent="ModularCharacters/Skeleton3D" index="184"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_16" parent="ModularCharacters/Skeleton3D" index="185"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_17" parent="ModularCharacters/Skeleton3D" index="186"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_18" parent="ModularCharacters/Skeleton3D" index="187"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_19" parent="ModularCharacters/Skeleton3D" index="188"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_20" parent="ModularCharacters/Skeleton3D" index="189"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_21" parent="ModularCharacters/Skeleton3D" index="190"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_22" parent="ModularCharacters/Skeleton3D" index="191"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_23" parent="ModularCharacters/Skeleton3D" index="192"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_24" parent="ModularCharacters/Skeleton3D" index="193"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_25" parent="ModularCharacters/Skeleton3D" index="194"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_26" parent="ModularCharacters/Skeleton3D" index="195"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_27" parent="ModularCharacters/Skeleton3D" index="196"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Male_28" parent="ModularCharacters/Skeleton3D" index="197"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_00" parent="ModularCharacters/Skeleton3D" index="198"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_01" parent="ModularCharacters/Skeleton3D" index="199"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_02" parent="ModularCharacters/Skeleton3D" index="200"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_03" parent="ModularCharacters/Skeleton3D" index="201"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_04" parent="ModularCharacters/Skeleton3D" index="202"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_05" parent="ModularCharacters/Skeleton3D" index="203"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_06" parent="ModularCharacters/Skeleton3D" index="204"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_07" parent="ModularCharacters/Skeleton3D" index="205"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_08" parent="ModularCharacters/Skeleton3D" index="206"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_09" parent="ModularCharacters/Skeleton3D" index="207"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_10" parent="ModularCharacters/Skeleton3D" index="208"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_11" parent="ModularCharacters/Skeleton3D" index="209"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_12" parent="ModularCharacters/Skeleton3D" index="210"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_13" parent="ModularCharacters/Skeleton3D" index="211"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_14" parent="ModularCharacters/Skeleton3D" index="212"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_15" parent="ModularCharacters/Skeleton3D" index="213"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_16" parent="ModularCharacters/Skeleton3D" index="214"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_17" parent="ModularCharacters/Skeleton3D" index="215"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_18" parent="ModularCharacters/Skeleton3D" index="216"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_19" parent="ModularCharacters/Skeleton3D" index="217"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Male_20" parent="ModularCharacters/Skeleton3D" index="218"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_00" parent="ModularCharacters/Skeleton3D" index="219"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_01" parent="ModularCharacters/Skeleton3D" index="220"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_02" parent="ModularCharacters/Skeleton3D" index="221"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_03" parent="ModularCharacters/Skeleton3D" index="222"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_04" parent="ModularCharacters/Skeleton3D" index="223"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_05" parent="ModularCharacters/Skeleton3D" index="224"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_06" parent="ModularCharacters/Skeleton3D" index="225"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_07" parent="ModularCharacters/Skeleton3D" index="226"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_08" parent="ModularCharacters/Skeleton3D" index="227"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_09" parent="ModularCharacters/Skeleton3D" index="228"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_10" parent="ModularCharacters/Skeleton3D" index="229"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_11" parent="ModularCharacters/Skeleton3D" index="230"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_12" parent="ModularCharacters/Skeleton3D" index="231"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_13" parent="ModularCharacters/Skeleton3D" index="232"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_14" parent="ModularCharacters/Skeleton3D" index="233"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_15" parent="ModularCharacters/Skeleton3D" index="234"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_16" parent="ModularCharacters/Skeleton3D" index="235"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_17" parent="ModularCharacters/Skeleton3D" index="236"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_18" parent="ModularCharacters/Skeleton3D" index="237"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_19" parent="ModularCharacters/Skeleton3D" index="238"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Male_20" parent="ModularCharacters/Skeleton3D" index="239"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_00" parent="ModularCharacters/Skeleton3D" index="240"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_01" parent="ModularCharacters/Skeleton3D" index="241"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_02" parent="ModularCharacters/Skeleton3D" index="242"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_03" parent="ModularCharacters/Skeleton3D" index="243"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_04" parent="ModularCharacters/Skeleton3D" index="244"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_05" parent="ModularCharacters/Skeleton3D" index="245"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_06" parent="ModularCharacters/Skeleton3D" index="246"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_07" parent="ModularCharacters/Skeleton3D" index="247"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_08" parent="ModularCharacters/Skeleton3D" index="248"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_09" parent="ModularCharacters/Skeleton3D" index="249"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_10" parent="ModularCharacters/Skeleton3D" index="250"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_11" parent="ModularCharacters/Skeleton3D" index="251"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_12" parent="ModularCharacters/Skeleton3D" index="252"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_13" parent="ModularCharacters/Skeleton3D" index="253"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_14" parent="ModularCharacters/Skeleton3D" index="254"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_15" parent="ModularCharacters/Skeleton3D" index="255"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_16" parent="ModularCharacters/Skeleton3D" index="256"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_17" parent="ModularCharacters/Skeleton3D" index="257"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Male_18" parent="ModularCharacters/Skeleton3D" index="258"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_00" parent="ModularCharacters/Skeleton3D" index="259"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_01" parent="ModularCharacters/Skeleton3D" index="260"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_02" parent="ModularCharacters/Skeleton3D" index="261"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_03" parent="ModularCharacters/Skeleton3D" index="262"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_04" parent="ModularCharacters/Skeleton3D" index="263"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_05" parent="ModularCharacters/Skeleton3D" index="264"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_06" parent="ModularCharacters/Skeleton3D" index="265"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_07" parent="ModularCharacters/Skeleton3D" index="266"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_08" parent="ModularCharacters/Skeleton3D" index="267"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_09" parent="ModularCharacters/Skeleton3D" index="268"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_10" parent="ModularCharacters/Skeleton3D" index="269"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_11" parent="ModularCharacters/Skeleton3D" index="270"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_12" parent="ModularCharacters/Skeleton3D" index="271"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_13" parent="ModularCharacters/Skeleton3D" index="272"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_14" parent="ModularCharacters/Skeleton3D" index="273"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_15" parent="ModularCharacters/Skeleton3D" index="274"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_16" parent="ModularCharacters/Skeleton3D" index="275"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_17" parent="ModularCharacters/Skeleton3D" index="276"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Male_18" parent="ModularCharacters/Skeleton3D" index="277"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_00" parent="ModularCharacters/Skeleton3D" index="278"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_01" parent="ModularCharacters/Skeleton3D" index="279"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_02" parent="ModularCharacters/Skeleton3D" index="280"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_03" parent="ModularCharacters/Skeleton3D" index="281"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_04" parent="ModularCharacters/Skeleton3D" index="282"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_05" parent="ModularCharacters/Skeleton3D" index="283"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_06" parent="ModularCharacters/Skeleton3D" index="284"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_07" parent="ModularCharacters/Skeleton3D" index="285"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_08" parent="ModularCharacters/Skeleton3D" index="286"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_09" parent="ModularCharacters/Skeleton3D" index="287"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_10" parent="ModularCharacters/Skeleton3D" index="288"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_11" parent="ModularCharacters/Skeleton3D" index="289"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_12" parent="ModularCharacters/Skeleton3D" index="290"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_13" parent="ModularCharacters/Skeleton3D" index="291"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_14" parent="ModularCharacters/Skeleton3D" index="292"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_15" parent="ModularCharacters/Skeleton3D" index="293"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_16" parent="ModularCharacters/Skeleton3D" index="294"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Male_17" parent="ModularCharacters/Skeleton3D" index="295"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_00" parent="ModularCharacters/Skeleton3D" index="296"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_01" parent="ModularCharacters/Skeleton3D" index="297"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_02" parent="ModularCharacters/Skeleton3D" index="298"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_03" parent="ModularCharacters/Skeleton3D" index="299"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_04" parent="ModularCharacters/Skeleton3D" index="300"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_05" parent="ModularCharacters/Skeleton3D" index="301"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_06" parent="ModularCharacters/Skeleton3D" index="302"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_07" parent="ModularCharacters/Skeleton3D" index="303"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_08" parent="ModularCharacters/Skeleton3D" index="304"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_09" parent="ModularCharacters/Skeleton3D" index="305"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_10" parent="ModularCharacters/Skeleton3D" index="306"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_11" parent="ModularCharacters/Skeleton3D" index="307"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_12" parent="ModularCharacters/Skeleton3D" index="308"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_13" parent="ModularCharacters/Skeleton3D" index="309"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_14" parent="ModularCharacters/Skeleton3D" index="310"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_15" parent="ModularCharacters/Skeleton3D" index="311"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_16" parent="ModularCharacters/Skeleton3D" index="312"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Male_17" parent="ModularCharacters/Skeleton3D" index="313"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_00" parent="ModularCharacters/Skeleton3D" index="314"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_01" parent="ModularCharacters/Skeleton3D" index="315"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_02" parent="ModularCharacters/Skeleton3D" index="316"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_03" parent="ModularCharacters/Skeleton3D" index="317"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_04" parent="ModularCharacters/Skeleton3D" index="318"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_05" parent="ModularCharacters/Skeleton3D" index="319"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_06" parent="ModularCharacters/Skeleton3D" index="320"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_07" parent="ModularCharacters/Skeleton3D" index="321"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_08" parent="ModularCharacters/Skeleton3D" index="322"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_09" parent="ModularCharacters/Skeleton3D" index="323"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_10" parent="ModularCharacters/Skeleton3D" index="324"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_11" parent="ModularCharacters/Skeleton3D" index="325"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_12" parent="ModularCharacters/Skeleton3D" index="326"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_13" parent="ModularCharacters/Skeleton3D" index="327"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_14" parent="ModularCharacters/Skeleton3D" index="328"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_15" parent="ModularCharacters/Skeleton3D" index="329"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_16" parent="ModularCharacters/Skeleton3D" index="330"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_17" parent="ModularCharacters/Skeleton3D" index="331"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_18" parent="ModularCharacters/Skeleton3D" index="332"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_19" parent="ModularCharacters/Skeleton3D" index="333"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_20" parent="ModularCharacters/Skeleton3D" index="334"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_21" parent="ModularCharacters/Skeleton3D" index="335"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_22" parent="ModularCharacters/Skeleton3D" index="336"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_23" parent="ModularCharacters/Skeleton3D" index="337"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_24" parent="ModularCharacters/Skeleton3D" index="338"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_25" parent="ModularCharacters/Skeleton3D" index="339"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_26" parent="ModularCharacters/Skeleton3D" index="340"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_27" parent="ModularCharacters/Skeleton3D" index="341"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Male_28" parent="ModularCharacters/Skeleton3D" index="342"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_00" parent="ModularCharacters/Skeleton3D" index="343"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_01" parent="ModularCharacters/Skeleton3D" index="344"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_02" parent="ModularCharacters/Skeleton3D" index="345"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_03" parent="ModularCharacters/Skeleton3D" index="346"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_04" parent="ModularCharacters/Skeleton3D" index="347"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_05" parent="ModularCharacters/Skeleton3D" index="348"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_06" parent="ModularCharacters/Skeleton3D" index="349"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_07" parent="ModularCharacters/Skeleton3D" index="350"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_08" parent="ModularCharacters/Skeleton3D" index="351"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_09" parent="ModularCharacters/Skeleton3D" index="352"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_10" parent="ModularCharacters/Skeleton3D" index="353"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_11" parent="ModularCharacters/Skeleton3D" index="354"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_12" parent="ModularCharacters/Skeleton3D" index="355"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_13" parent="ModularCharacters/Skeleton3D" index="356"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_14" parent="ModularCharacters/Skeleton3D" index="357"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_15" parent="ModularCharacters/Skeleton3D" index="358"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_16" parent="ModularCharacters/Skeleton3D" index="359"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_17" parent="ModularCharacters/Skeleton3D" index="360"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_18" parent="ModularCharacters/Skeleton3D" index="361"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Male_19" parent="ModularCharacters/Skeleton3D" index="362"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_00" parent="ModularCharacters/Skeleton3D" index="363"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_01" parent="ModularCharacters/Skeleton3D" index="364"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_02" parent="ModularCharacters/Skeleton3D" index="365"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_03" parent="ModularCharacters/Skeleton3D" index="366"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_04" parent="ModularCharacters/Skeleton3D" index="367"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_05" parent="ModularCharacters/Skeleton3D" index="368"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_06" parent="ModularCharacters/Skeleton3D" index="369"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_07" parent="ModularCharacters/Skeleton3D" index="370"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_08" parent="ModularCharacters/Skeleton3D" index="371"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_09" parent="ModularCharacters/Skeleton3D" index="372"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_10" parent="ModularCharacters/Skeleton3D" index="373"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_11" parent="ModularCharacters/Skeleton3D" index="374"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_12" parent="ModularCharacters/Skeleton3D" index="375"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_13" parent="ModularCharacters/Skeleton3D" index="376"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_14" parent="ModularCharacters/Skeleton3D" index="377"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_15" parent="ModularCharacters/Skeleton3D" index="378"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_16" parent="ModularCharacters/Skeleton3D" index="379"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_17" parent="ModularCharacters/Skeleton3D" index="380"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_18" parent="ModularCharacters/Skeleton3D" index="381"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Male_19" parent="ModularCharacters/Skeleton3D" index="382"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Female_01" parent="ModularCharacters/Skeleton3D" index="383"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Female_02" parent="ModularCharacters/Skeleton3D" index="384"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Female_03" parent="ModularCharacters/Skeleton3D" index="385"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Female_04" parent="ModularCharacters/Skeleton3D" index="386"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Female_05" parent="ModularCharacters/Skeleton3D" index="387"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Female_06" parent="ModularCharacters/Skeleton3D" index="388"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Eyebrow_Female_07" parent="ModularCharacters/Skeleton3D" index="389"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_00" parent="ModularCharacters/Skeleton3D" index="390"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_01" parent="ModularCharacters/Skeleton3D" index="391"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_02" parent="ModularCharacters/Skeleton3D" index="392"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_03" parent="ModularCharacters/Skeleton3D" index="393"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_04" parent="ModularCharacters/Skeleton3D" index="394"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_05" parent="ModularCharacters/Skeleton3D" index="395"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_06" parent="ModularCharacters/Skeleton3D" index="396"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_07" parent="ModularCharacters/Skeleton3D" index="397"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_08" parent="ModularCharacters/Skeleton3D" index="398"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_09" parent="ModularCharacters/Skeleton3D" index="399"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_10" parent="ModularCharacters/Skeleton3D" index="400"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_11" parent="ModularCharacters/Skeleton3D" index="401"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_12" parent="ModularCharacters/Skeleton3D" index="402"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_13" parent="ModularCharacters/Skeleton3D" index="403"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_14" parent="ModularCharacters/Skeleton3D" index="404"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_15" parent="ModularCharacters/Skeleton3D" index="405"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_16" parent="ModularCharacters/Skeleton3D" index="406"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_17" parent="ModularCharacters/Skeleton3D" index="407"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_18" parent="ModularCharacters/Skeleton3D" index="408"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_19" parent="ModularCharacters/Skeleton3D" index="409"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_20" parent="ModularCharacters/Skeleton3D" index="410"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_21" parent="ModularCharacters/Skeleton3D" index="411"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_22" parent="ModularCharacters/Skeleton3D" index="412"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_23" parent="ModularCharacters/Skeleton3D" index="413"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_24" parent="ModularCharacters/Skeleton3D" index="414"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_25" parent="ModularCharacters/Skeleton3D" index="415"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_26" parent="ModularCharacters/Skeleton3D" index="416"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_27" parent="ModularCharacters/Skeleton3D" index="417"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Torso_Female_28" parent="ModularCharacters/Skeleton3D" index="418"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_00" parent="ModularCharacters/Skeleton3D" index="419"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_01" parent="ModularCharacters/Skeleton3D" index="420"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_02" parent="ModularCharacters/Skeleton3D" index="421"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_03" parent="ModularCharacters/Skeleton3D" index="422"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_04" parent="ModularCharacters/Skeleton3D" index="423"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_05" parent="ModularCharacters/Skeleton3D" index="424"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_06" parent="ModularCharacters/Skeleton3D" index="425"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_07" parent="ModularCharacters/Skeleton3D" index="426"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_08" parent="ModularCharacters/Skeleton3D" index="427"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_09" parent="ModularCharacters/Skeleton3D" index="428"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_10" parent="ModularCharacters/Skeleton3D" index="429"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_11" parent="ModularCharacters/Skeleton3D" index="430"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_12" parent="ModularCharacters/Skeleton3D" index="431"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_13" parent="ModularCharacters/Skeleton3D" index="432"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_14" parent="ModularCharacters/Skeleton3D" index="433"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_15" parent="ModularCharacters/Skeleton3D" index="434"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_16" parent="ModularCharacters/Skeleton3D" index="435"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_17" parent="ModularCharacters/Skeleton3D" index="436"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_18" parent="ModularCharacters/Skeleton3D" index="437"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_19" parent="ModularCharacters/Skeleton3D" index="438"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperRight_Female_20" parent="ModularCharacters/Skeleton3D" index="439"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_00" parent="ModularCharacters/Skeleton3D" index="440"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_01" parent="ModularCharacters/Skeleton3D" index="441"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_02" parent="ModularCharacters/Skeleton3D" index="442"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_03" parent="ModularCharacters/Skeleton3D" index="443"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_04" parent="ModularCharacters/Skeleton3D" index="444"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_05" parent="ModularCharacters/Skeleton3D" index="445"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_06" parent="ModularCharacters/Skeleton3D" index="446"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_07" parent="ModularCharacters/Skeleton3D" index="447"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_08" parent="ModularCharacters/Skeleton3D" index="448"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_09" parent="ModularCharacters/Skeleton3D" index="449"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_10" parent="ModularCharacters/Skeleton3D" index="450"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_11" parent="ModularCharacters/Skeleton3D" index="451"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_12" parent="ModularCharacters/Skeleton3D" index="452"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_13" parent="ModularCharacters/Skeleton3D" index="453"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_14" parent="ModularCharacters/Skeleton3D" index="454"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_15" parent="ModularCharacters/Skeleton3D" index="455"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_16" parent="ModularCharacters/Skeleton3D" index="456"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_17" parent="ModularCharacters/Skeleton3D" index="457"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_18" parent="ModularCharacters/Skeleton3D" index="458"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_19" parent="ModularCharacters/Skeleton3D" index="459"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmUpperLeft_Female_20" parent="ModularCharacters/Skeleton3D" index="460"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_00" parent="ModularCharacters/Skeleton3D" index="461"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_01" parent="ModularCharacters/Skeleton3D" index="462"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_02" parent="ModularCharacters/Skeleton3D" index="463"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_03" parent="ModularCharacters/Skeleton3D" index="464"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_04" parent="ModularCharacters/Skeleton3D" index="465"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_05" parent="ModularCharacters/Skeleton3D" index="466"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_06" parent="ModularCharacters/Skeleton3D" index="467"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_07" parent="ModularCharacters/Skeleton3D" index="468"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_08" parent="ModularCharacters/Skeleton3D" index="469"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_09" parent="ModularCharacters/Skeleton3D" index="470"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_10" parent="ModularCharacters/Skeleton3D" index="471"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_11" parent="ModularCharacters/Skeleton3D" index="472"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_12" parent="ModularCharacters/Skeleton3D" index="473"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_13" parent="ModularCharacters/Skeleton3D" index="474"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_14" parent="ModularCharacters/Skeleton3D" index="475"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_15" parent="ModularCharacters/Skeleton3D" index="476"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_16" parent="ModularCharacters/Skeleton3D" index="477"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_17" parent="ModularCharacters/Skeleton3D" index="478"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerRight_Female_18" parent="ModularCharacters/Skeleton3D" index="479"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_00" parent="ModularCharacters/Skeleton3D" index="480"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_01" parent="ModularCharacters/Skeleton3D" index="481"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_02" parent="ModularCharacters/Skeleton3D" index="482"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_03" parent="ModularCharacters/Skeleton3D" index="483"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_04" parent="ModularCharacters/Skeleton3D" index="484"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_05" parent="ModularCharacters/Skeleton3D" index="485"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_06" parent="ModularCharacters/Skeleton3D" index="486"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_07" parent="ModularCharacters/Skeleton3D" index="487"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_08" parent="ModularCharacters/Skeleton3D" index="488"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_09" parent="ModularCharacters/Skeleton3D" index="489"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_10" parent="ModularCharacters/Skeleton3D" index="490"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_11" parent="ModularCharacters/Skeleton3D" index="491"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_12" parent="ModularCharacters/Skeleton3D" index="492"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_13" parent="ModularCharacters/Skeleton3D" index="493"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_14" parent="ModularCharacters/Skeleton3D" index="494"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_15" parent="ModularCharacters/Skeleton3D" index="495"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_16" parent="ModularCharacters/Skeleton3D" index="496"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_17" parent="ModularCharacters/Skeleton3D" index="497"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_ArmLowerLeft_Female_18" parent="ModularCharacters/Skeleton3D" index="498"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_00" parent="ModularCharacters/Skeleton3D" index="499"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_01" parent="ModularCharacters/Skeleton3D" index="500"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_02" parent="ModularCharacters/Skeleton3D" index="501"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_03" parent="ModularCharacters/Skeleton3D" index="502"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_04" parent="ModularCharacters/Skeleton3D" index="503"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_05" parent="ModularCharacters/Skeleton3D" index="504"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_06" parent="ModularCharacters/Skeleton3D" index="505"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_07" parent="ModularCharacters/Skeleton3D" index="506"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_08" parent="ModularCharacters/Skeleton3D" index="507"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_09" parent="ModularCharacters/Skeleton3D" index="508"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_10" parent="ModularCharacters/Skeleton3D" index="509"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_11" parent="ModularCharacters/Skeleton3D" index="510"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_12" parent="ModularCharacters/Skeleton3D" index="511"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_13" parent="ModularCharacters/Skeleton3D" index="512"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_14" parent="ModularCharacters/Skeleton3D" index="513"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_15" parent="ModularCharacters/Skeleton3D" index="514"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_16" parent="ModularCharacters/Skeleton3D" index="515"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandRight_Female_17" parent="ModularCharacters/Skeleton3D" index="516"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_00" parent="ModularCharacters/Skeleton3D" index="517"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_01" parent="ModularCharacters/Skeleton3D" index="518"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_02" parent="ModularCharacters/Skeleton3D" index="519"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_03" parent="ModularCharacters/Skeleton3D" index="520"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_04" parent="ModularCharacters/Skeleton3D" index="521"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_05" parent="ModularCharacters/Skeleton3D" index="522"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_06" parent="ModularCharacters/Skeleton3D" index="523"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_07" parent="ModularCharacters/Skeleton3D" index="524"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_08" parent="ModularCharacters/Skeleton3D" index="525"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_09" parent="ModularCharacters/Skeleton3D" index="526"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_10" parent="ModularCharacters/Skeleton3D" index="527"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_11" parent="ModularCharacters/Skeleton3D" index="528"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_12" parent="ModularCharacters/Skeleton3D" index="529"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_13" parent="ModularCharacters/Skeleton3D" index="530"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_14" parent="ModularCharacters/Skeleton3D" index="531"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_15" parent="ModularCharacters/Skeleton3D" index="532"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_16" parent="ModularCharacters/Skeleton3D" index="533"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HandLeft_Female_17" parent="ModularCharacters/Skeleton3D" index="534"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_00" parent="ModularCharacters/Skeleton3D" index="535"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_01" parent="ModularCharacters/Skeleton3D" index="536"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_02" parent="ModularCharacters/Skeleton3D" index="537"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_03" parent="ModularCharacters/Skeleton3D" index="538"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_04" parent="ModularCharacters/Skeleton3D" index="539"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_05" parent="ModularCharacters/Skeleton3D" index="540"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_06" parent="ModularCharacters/Skeleton3D" index="541"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_07" parent="ModularCharacters/Skeleton3D" index="542"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_08" parent="ModularCharacters/Skeleton3D" index="543"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_09" parent="ModularCharacters/Skeleton3D" index="544"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_10" parent="ModularCharacters/Skeleton3D" index="545"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_11" parent="ModularCharacters/Skeleton3D" index="546"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_12" parent="ModularCharacters/Skeleton3D" index="547"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_13" parent="ModularCharacters/Skeleton3D" index="548"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_14" parent="ModularCharacters/Skeleton3D" index="549"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_15" parent="ModularCharacters/Skeleton3D" index="550"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_16" parent="ModularCharacters/Skeleton3D" index="551"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_17" parent="ModularCharacters/Skeleton3D" index="552"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_18" parent="ModularCharacters/Skeleton3D" index="553"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_19" parent="ModularCharacters/Skeleton3D" index="554"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_20" parent="ModularCharacters/Skeleton3D" index="555"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_21" parent="ModularCharacters/Skeleton3D" index="556"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_22" parent="ModularCharacters/Skeleton3D" index="557"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_23" parent="ModularCharacters/Skeleton3D" index="558"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_24" parent="ModularCharacters/Skeleton3D" index="559"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_25" parent="ModularCharacters/Skeleton3D" index="560"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_26" parent="ModularCharacters/Skeleton3D" index="561"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_27" parent="ModularCharacters/Skeleton3D" index="562"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Hips_Female_28" parent="ModularCharacters/Skeleton3D" index="563"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_00" parent="ModularCharacters/Skeleton3D" index="564"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_01" parent="ModularCharacters/Skeleton3D" index="565"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_02" parent="ModularCharacters/Skeleton3D" index="566"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_03" parent="ModularCharacters/Skeleton3D" index="567"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_04" parent="ModularCharacters/Skeleton3D" index="568"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_05" parent="ModularCharacters/Skeleton3D" index="569"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_06" parent="ModularCharacters/Skeleton3D" index="570"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_07" parent="ModularCharacters/Skeleton3D" index="571"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_08" parent="ModularCharacters/Skeleton3D" index="572"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_09" parent="ModularCharacters/Skeleton3D" index="573"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_10" parent="ModularCharacters/Skeleton3D" index="574"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_11" parent="ModularCharacters/Skeleton3D" index="575"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_12" parent="ModularCharacters/Skeleton3D" index="576"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_13" parent="ModularCharacters/Skeleton3D" index="577"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_14" parent="ModularCharacters/Skeleton3D" index="578"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_15" parent="ModularCharacters/Skeleton3D" index="579"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_16" parent="ModularCharacters/Skeleton3D" index="580"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_17" parent="ModularCharacters/Skeleton3D" index="581"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_18" parent="ModularCharacters/Skeleton3D" index="582"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegRight_Female_19" parent="ModularCharacters/Skeleton3D" index="583"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_00" parent="ModularCharacters/Skeleton3D" index="584"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_01" parent="ModularCharacters/Skeleton3D" index="585"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_02" parent="ModularCharacters/Skeleton3D" index="586"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_03" parent="ModularCharacters/Skeleton3D" index="587"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_04" parent="ModularCharacters/Skeleton3D" index="588"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_05" parent="ModularCharacters/Skeleton3D" index="589"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_06" parent="ModularCharacters/Skeleton3D" index="590"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_07" parent="ModularCharacters/Skeleton3D" index="591"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_08" parent="ModularCharacters/Skeleton3D" index="592"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_09" parent="ModularCharacters/Skeleton3D" index="593"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_10" parent="ModularCharacters/Skeleton3D" index="594"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_11" parent="ModularCharacters/Skeleton3D" index="595"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_12" parent="ModularCharacters/Skeleton3D" index="596"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_13" parent="ModularCharacters/Skeleton3D" index="597"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_14" parent="ModularCharacters/Skeleton3D" index="598"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_15" parent="ModularCharacters/Skeleton3D" index="599"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_16" parent="ModularCharacters/Skeleton3D" index="600"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_17" parent="ModularCharacters/Skeleton3D" index="601"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_18" parent="ModularCharacters/Skeleton3D" index="602"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_LegLeft_Female_19" parent="ModularCharacters/Skeleton3D" index="603"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_01" parent="ModularCharacters/Skeleton3D" index="604"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_02" parent="ModularCharacters/Skeleton3D" index="605"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_03" parent="ModularCharacters/Skeleton3D" index="606"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_04" parent="ModularCharacters/Skeleton3D" index="607"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_05" parent="ModularCharacters/Skeleton3D" index="608"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_06" parent="ModularCharacters/Skeleton3D" index="609"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_07" parent="ModularCharacters/Skeleton3D" index="610"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_08" parent="ModularCharacters/Skeleton3D" index="611"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_09" parent="ModularCharacters/Skeleton3D" index="612"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_10" parent="ModularCharacters/Skeleton3D" index="613"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_11" parent="ModularCharacters/Skeleton3D" index="614"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_12" parent="ModularCharacters/Skeleton3D" index="615"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_Hair_13" parent="ModularCharacters/Skeleton3D" index="616"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_01" parent="ModularCharacters/Skeleton3D" index="617"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_02" parent="ModularCharacters/Skeleton3D" index="618"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_03" parent="ModularCharacters/Skeleton3D" index="619"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_04" parent="ModularCharacters/Skeleton3D" index="620"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_05" parent="ModularCharacters/Skeleton3D" index="621"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_06" parent="ModularCharacters/Skeleton3D" index="622"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_07" parent="ModularCharacters/Skeleton3D" index="623"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_08" parent="ModularCharacters/Skeleton3D" index="624"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_09" parent="ModularCharacters/Skeleton3D" index="625"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_10" parent="ModularCharacters/Skeleton3D" index="626"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_Base_Hair_11" parent="ModularCharacters/Skeleton3D" index="627"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_FacialHair_01" parent="ModularCharacters/Skeleton3D" index="628"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_FacialHair_02" parent="ModularCharacters/Skeleton3D" index="629"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_FacialHair_03" parent="ModularCharacters/Skeleton3D" index="630"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HeadCoverings_No_FacialHair_04" parent="ModularCharacters/Skeleton3D" index="631"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_01" parent="ModularCharacters/Skeleton3D" index="632"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_02" parent="ModularCharacters/Skeleton3D" index="633"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_03" parent="ModularCharacters/Skeleton3D" index="634"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_04" parent="ModularCharacters/Skeleton3D" index="635"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_05" parent="ModularCharacters/Skeleton3D" index="636"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_06" parent="ModularCharacters/Skeleton3D" index="637"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_07" parent="ModularCharacters/Skeleton3D" index="638"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_08" parent="ModularCharacters/Skeleton3D" index="639"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_09" parent="ModularCharacters/Skeleton3D" index="640"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_10" parent="ModularCharacters/Skeleton3D" index="641"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_11" parent="ModularCharacters/Skeleton3D" index="642"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_12" parent="ModularCharacters/Skeleton3D" index="643"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_HelmetAttachment_13" parent="ModularCharacters/Skeleton3D" index="644"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Ear_Ear_01" parent="ModularCharacters/Skeleton3D" index="645"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Ear_Ear_02" parent="ModularCharacters/Skeleton3D" index="646"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Ear_Ear_03" parent="ModularCharacters/Skeleton3D" index="647"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_01" parent="ModularCharacters/Skeleton3D" index="648"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_02" parent="ModularCharacters/Skeleton3D" index="649"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_03" parent="ModularCharacters/Skeleton3D" index="650"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_04" parent="ModularCharacters/Skeleton3D" index="651"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_05" parent="ModularCharacters/Skeleton3D" index="652"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_06" parent="ModularCharacters/Skeleton3D" index="653"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_07" parent="ModularCharacters/Skeleton3D" index="654"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_08" parent="ModularCharacters/Skeleton3D" index="655"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_09" parent="ModularCharacters/Skeleton3D" index="656"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_10" parent="ModularCharacters/Skeleton3D" index="657"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_11" parent="ModularCharacters/Skeleton3D" index="658"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_12" parent="ModularCharacters/Skeleton3D" index="659"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Male_13" parent="ModularCharacters/Skeleton3D" index="660"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_00" parent="ModularCharacters/Skeleton3D" index="661"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_01" parent="ModularCharacters/Skeleton3D" index="662"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_02" parent="ModularCharacters/Skeleton3D" index="663"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_03" parent="ModularCharacters/Skeleton3D" index="664"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_04" parent="ModularCharacters/Skeleton3D" index="665"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_05" parent="ModularCharacters/Skeleton3D" index="666"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_06" parent="ModularCharacters/Skeleton3D" index="667"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_07" parent="ModularCharacters/Skeleton3D" index="668"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_08" parent="ModularCharacters/Skeleton3D" index="669"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_09" parent="ModularCharacters/Skeleton3D" index="670"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_10" parent="ModularCharacters/Skeleton3D" index="671"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_11" parent="ModularCharacters/Skeleton3D" index="672"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_12" parent="ModularCharacters/Skeleton3D" index="673"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_13" parent="ModularCharacters/Skeleton3D" index="674"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_14" parent="ModularCharacters/Skeleton3D" index="675"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_15" parent="ModularCharacters/Skeleton3D" index="676"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_16" parent="ModularCharacters/Skeleton3D" index="677"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_17" parent="ModularCharacters/Skeleton3D" index="678"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_18" parent="ModularCharacters/Skeleton3D" index="679"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_19" parent="ModularCharacters/Skeleton3D" index="680"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_20" parent="ModularCharacters/Skeleton3D" index="681"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_21" parent="ModularCharacters/Skeleton3D" index="682"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Male_22" parent="ModularCharacters/Skeleton3D" index="683"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_01" parent="ModularCharacters/Skeleton3D" index="684"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_02" parent="ModularCharacters/Skeleton3D" index="685"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_03" parent="ModularCharacters/Skeleton3D" index="686"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_04" parent="ModularCharacters/Skeleton3D" index="687"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_05" parent="ModularCharacters/Skeleton3D" index="688"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_06" parent="ModularCharacters/Skeleton3D" index="689"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_07" parent="ModularCharacters/Skeleton3D" index="690"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_08" parent="ModularCharacters/Skeleton3D" index="691"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_09" parent="ModularCharacters/Skeleton3D" index="692"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_10" parent="ModularCharacters/Skeleton3D" index="693"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_11" parent="ModularCharacters/Skeleton3D" index="694"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_12" parent="ModularCharacters/Skeleton3D" index="695"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_No_Elements_Female_13" parent="ModularCharacters/Skeleton3D" index="696"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_00" parent="ModularCharacters/Skeleton3D" index="697"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_01" parent="ModularCharacters/Skeleton3D" index="698"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_02" parent="ModularCharacters/Skeleton3D" index="699"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_03" parent="ModularCharacters/Skeleton3D" index="700"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_04" parent="ModularCharacters/Skeleton3D" index="701"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_05" parent="ModularCharacters/Skeleton3D" index="702"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_06" parent="ModularCharacters/Skeleton3D" index="703"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_07" parent="ModularCharacters/Skeleton3D" index="704"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_08" parent="ModularCharacters/Skeleton3D" index="705"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_09" parent="ModularCharacters/Skeleton3D" index="706"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_10" parent="ModularCharacters/Skeleton3D" index="707"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_11" parent="ModularCharacters/Skeleton3D" index="708"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_12" parent="ModularCharacters/Skeleton3D" index="709"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_13" parent="ModularCharacters/Skeleton3D" index="710"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_14" parent="ModularCharacters/Skeleton3D" index="711"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_15" parent="ModularCharacters/Skeleton3D" index="712"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_16" parent="ModularCharacters/Skeleton3D" index="713"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_17" parent="ModularCharacters/Skeleton3D" index="714"]
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_18" parent="ModularCharacters/Skeleton3D" index="715"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_19" parent="ModularCharacters/Skeleton3D" index="716"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_20" parent="ModularCharacters/Skeleton3D" index="717"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_21" parent="ModularCharacters/Skeleton3D" index="718"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+
+[node name="Chr_Head_Female_22" parent="ModularCharacters/Skeleton3D" index="719"]
+visible = false
+material_override = SubResource("StandardMaterial3D_dw050")
+cast_shadow = 0
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+spring_length = -5.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+fov = 100.0
+
+[editable path="ModularCharacters"]
