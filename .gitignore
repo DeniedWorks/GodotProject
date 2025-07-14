@@ -1,3 +1,6 @@
+# My ignores
+--IMPORT--/
+
 # Godot 4+ specific ignores
 .godot/
 /android/

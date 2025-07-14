@@ -76,11 +76,11 @@ jump={
 
 wind_intensity={
 "type": "float",
-"value": 0.01
+"value": 0.5
 }
 wind_direction={
 "type": "vec3",
-"value": Vector3(0.2, 0, 0.1)
+"value": Vector3(1, 0, 0)
 }
 player_position={
 "type": "vec3",

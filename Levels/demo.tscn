@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://djohvfhlk6cr7"]
+
+[ext_resource type="Material" uid="uid://cr8yf6r3utjih" path="res://Shaders/water_mat.tres" id="1_lnlcd"]
+[ext_resource type="Terrain3DAssets" uid="uid://chs03pubumyx4" path="res://Levels/demo.res" id="2_ejuld"]
+[ext_resource type="PackedScene" uid="uid://m24xtiu5he34" path="res://Player/player.tscn" id="6_tdfjp"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tql22"]
+size = Vector2(1024, 1024)
+subdivide_width = 1000
+subdivide_depth = 1000
+
+[sub_resource type="Gradient" id="Gradient_5hfv0"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0bhed"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_m0rpm"]
+seamless = true
+color_ramp = SubResource("Gradient_5hfv0")
+noise = SubResource("FastNoiseLite_0bhed")
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_c6xj6"]
+_shader_parameters = {
+&"auto_base_texture": 1,
+&"auto_height_reduction": 0.1,
+&"auto_overlay_texture": 0,
+&"auto_slope": 1.0,
+&"bias_distance": 512.0,
+&"blend_sharpness": 0.0,
+&"depth_blur": 0.0,
+&"enable_macro_variation": true,
+&"enable_projection": true,
+&"flat_terrain_normals": false,
+&"macro_variation1": Color(1, 1, 1, 1),
+&"macro_variation2": Color(1, 1, 1, 1),
+&"macro_variation_slope": 0.333,
+&"mipmap_bias": 1.0,
+&"noise1_angle": 0.0,
+&"noise1_offset": Vector2(0.5, 0.5),
+&"noise1_scale": 0.04,
+&"noise2_scale": 0.076,
+&"noise_texture": SubResource("NoiseTexture2D_m0rpm"),
+&"projection_threshold": 0.8
+}
+world_background = 0
+auto_shader = true
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5hfv0"]
+sky_top_color = Color(0.544758, 0.77225, 1, 1)
+sky_horizon_color = Color(0.286275, 0.694118, 1, 1)
+sky_curve = 0.204906
+ground_bottom_color = Color(0, 0.474145, 0.903723, 1)
+ground_horizon_color = Color(0.285824, 0.694939, 1, 1)
+ground_curve = 0.0649804
+
+[sub_resource type="Sky" id="Sky_5hfv0"]
+sky_material = SubResource("ProceduralSkyMaterial_5hfv0")
+
+[sub_resource type="Environment" id="Environment_0bhed"]
+background_mode = 2
+sky = SubResource("Sky_5hfv0")
+
+[node name="Demo" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.489112, 0, 0, 0, 0.489111, -0.000785368, 0, 0.000785368, 0.489111, -3.33019, 22.1327, -13.5296)
+mesh = SubResource("PlaneMesh_tql22")
+surface_material_override/0 = ExtResource("1_lnlcd")
+
+[node name="Terrain3D" type="Terrain3D" parent="."]
+data_directory = "res://Terrain3D"
+material = SubResource("Terrain3DMaterial_c6xj6")
+assets = ExtResource("2_ejuld")
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0bhed")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.452372, 0.891829, 0, -0.891829, 0.452372, 0, 211.836, 181.878)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("6_tdfjp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1425, 23.5281, -83.6512)
